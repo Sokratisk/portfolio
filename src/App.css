@@ -24,6 +24,11 @@
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--text);
+  text-decoration: none;
+}
+
+.nav-brand:hover {
+  color: var(--accent);
 }
 
 .nav-links {

@@ -6,10 +6,12 @@ export function Hero() {
         <h1>Sokratis Kelemidis</h1>
         <h2>Frontend Software Engineer</h2>
         <p className="hero-description">
-          I build complex, customer-facing web applications using{" "}
-          <strong>Angular</strong>, <strong>Vue</strong> and{" "}
-          <strong>React</strong> — with full-stack experience in{" "}
-          <strong>.NET</strong> and <strong>Django</strong>.
+          Frontend Software Engineer based in Athens, Greece with 4+ years of
+          experience delivering production applications for enterprise clients
+          in insurance, pharma, and automotive. Specialized in{" "}
+          <strong>Angular</strong> and <strong>Vue</strong>, with full-stack
+          reach into <strong>.NET</strong> and <strong>Django</strong> — and a
+          background in <strong>Unity 3D</strong> game and VR development.
         </p>
         <div className="hero-actions">
           <a href="#projects" className="btn btn-primary">

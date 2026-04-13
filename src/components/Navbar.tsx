@@ -1,11 +1,8 @@
 export function Navbar() {
   return (
     <nav className="navbar">
-      <span className="nav-brand">Sokratis Kelemidis</span>
+      <a href="#hero" className="nav-brand">Sokratis Kelemidis</a>
       <ul className="nav-links">
-        <li>
-          <a href="#about">About</a>
-        </li>
         <li>
           <a href="#skills">Skills</a>
         </li>
