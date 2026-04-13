@@ -4,7 +4,7 @@ export function Footer() {
       <p>
         Built with React &amp; Vite ·{' '}
         <a
-          href="https://github.com/yourusername/portfolio"
+          href="https://github.com/Sokratisk/portfolio"
           target="_blank"
           rel="noopener noreferrer"
         >

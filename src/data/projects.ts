@@ -8,26 +8,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Project One",
+    title: "Rotor Command",
     description:
-      "A full-featured Angular application. Describe what problem it solves and what you built here.",
-    tags: ["Angular", "TypeScript", "RxJS", "NgRx"],
-    github: "#",
-    live: "#",
+      "Co-developed a full-stack back-office web application for helicopter rental management. Handles scheduling, fleet tracking, and operational workflows for aviation clients.",
+    tags: ["React", "Django", "Python", "REST API"],
   },
   {
-    title: "Project Two",
+    title: "VR Experience of Museums",
     description:
-      "A React application built with modern hooks and clean state management. Describe what it does.",
-    tags: ["React", "TypeScript", "CSS Modules"],
-    github: "#",
-    live: "#",
+      "Full Oculus VR experience for Museums developed at Tenebra Studios. Built as a reusable framework adopted by various Greek museums to deliver immersive cultural experiences.",
+    tags: ["Unity 3D", "C#", "Oculus VR", "XR"],
   },
   {
-    title: "Project Three",
+    title: "Android Music Game",
     description:
-      "Another frontend project showcasing your skills. Add a short, impactful description here.",
-    tags: ["Angular", "TypeScript", "REST API"],
-    github: "#",
+      "Created the engine for a mobile game based on music with both 3D and 2D environments. Developed at Tenebra Studios as a rhythm-driven gameplay experience.",
+    tags: ["Unity 3D", "C#", "Android", "Mobile"],
   },
 ];

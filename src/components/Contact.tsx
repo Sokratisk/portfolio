@@ -8,11 +8,11 @@ export function Contact() {
           want to say hi — my inbox is open!
         </p>
         <div className="contact-links">
-          <a href="mailto:your@email.com" className="btn btn-primary">
+          <a href="mailto:sokratis.kelemidis@gmail.com" className="btn btn-primary">
             Send Email
           </a>
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/Sokratisk"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-outline"
@@ -20,7 +20,7 @@ export function Contact() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://linkedin.com/in/sokratis-kelemidis"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-outline"

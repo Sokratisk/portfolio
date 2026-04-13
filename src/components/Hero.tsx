@@ -4,11 +4,12 @@ export function Hero() {
       <div className="hero-content">
         <p className="hero-eyebrow">Hi, I'm</p>
         <h1>Sokratis Kelemidis</h1>
-        <h2>Frontend Developer</h2>
+        <h2>Frontend Software Engineer</h2>
         <p className="hero-description">
-          I build modern, responsive web applications using{" "}
-          <strong>Angular</strong>, <strong>React</strong> and{" "}
-          <strong>Vue</strong>.
+          I build complex, customer-facing web applications using{" "}
+          <strong>Angular</strong>, <strong>Vue</strong> and{" "}
+          <strong>React</strong> — with full-stack experience in{" "}
+          <strong>.NET</strong> and <strong>Django</strong>.
         </p>
         <div className="hero-actions">
           <a href="#projects" className="btn btn-primary">
