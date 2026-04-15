@@ -1,14 +1,19 @@
-import type { Skill } from "../data/skills";
+import { levelLabel, type Skill } from '../data/skills'
 
-interface SkillCardProps {
-  skill: Skill;
-}
+const DOTS = [1, 2, 3, 4, 5]
 
-export function SkillCard({ skill }: SkillCardProps) {
+export function SkillRow({ skill }: { skill: Skill }) {
   return (
-    <div className="skill-card">
-      <span className="skill-icon">{skill.icon}</span>
-      <span className="skill-name">{skill.name}</span>
+    <div className="skill-row">
+      <span className="skill-row-name">{skill.name}</span>
+      <div className="skill-meta">
+        <span className="skill-level-label">{levelLabel[skill.level]}</span>
+        <div className="skill-dots" aria-label={`${levelLabel[skill.level]} — ${skill.level} of 5`}>
+          {DOTS.map(i => (
+            <span key={i} className={`skill-dot${i <= skill.level ? ' filled' : ''}`} />
+          ))}
+        </div>
+      </div>
     </div>
-  );
+  )
 }

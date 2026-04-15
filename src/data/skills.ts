@@ -1,24 +1,58 @@
 export interface Skill {
   name: string
-  icon: string
+  level: 1 | 2 | 3 | 4 | 5
 }
 
-export const skills: Skill[] = [
-  { name: 'Angular', icon: 'A' },
-  { name: 'Vue', icon: 'V' },
-  { name: 'React', icon: '⚛' },
-  { name: 'TypeScript', icon: 'TS' },
-  { name: 'JavaScript', icon: 'JS' },
-  { name: 'RxJS', icon: '~' },
-  { name: 'NgRx', icon: '⟳' },
-  { name: 'HTML5', icon: '</>' },
-  { name: 'CSS / SCSS', icon: '{}' },
-  { name: '.NET', icon: '◆' },
-  { name: 'Django', icon: '⚙' },
-  { name: 'Node.js', icon: '⬡' },
-  { name: 'REST APIs', icon: '⇄' },
-  { name: 'Azure', icon: '☁' },
-  { name: 'Git', icon: '⎇' },
-  { name: 'Unity 3D', icon: '▶' },
-  { name: 'Agile', icon: '🎯' },
+export interface SkillCategory {
+  name: string
+  skills: Skill[]
+}
+
+export const levelLabel: Record<number, string> = {
+  5: 'Expert',
+  4: 'Advanced',
+  3: 'Proficient',
+  2: 'Familiar',
+  1: 'Learning',
+}
+
+export const skillCategories: SkillCategory[] = [
+  {
+    name: 'Frontend',
+    skills: [
+      { name: 'Angular', level: 5 },
+      { name: 'Vue', level: 5 },
+      { name: 'TypeScript', level: 4 },
+      { name: 'JavaScript', level: 4 },
+      { name: 'RxJS', level: 4 },
+      { name: 'NgRx', level: 4 },
+      { name: 'HTML5 / CSS / SCSS', level: 4 },
+      { name: 'React', level: 3 },
+    ],
+  },
+  {
+    name: 'Backend',
+    skills: [
+      { name: 'REST APIs', level: 4 },
+      { name: '.NET / C#', level: 3 },
+      { name: 'Django / Python', level: 3 },
+      { name: 'Node.js', level: 2 },
+    ],
+  },
+  {
+    name: 'DevOps & Tools',
+    skills: [
+      { name: 'Git', level: 4 },
+      { name: 'Agile / Scrum', level: 3 },
+      { name: 'Azure', level: 2 },
+    ],
+  },
+  {
+    name: 'Game & XR',
+    skills: [
+      { name: 'Unity 3D', level: 4 },
+      { name: 'C#', level: 4 },
+      { name: 'Oculus / XR', level: 3 },
+    ],
+  },
 ]
