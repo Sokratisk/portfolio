@@ -1,26 +1,17 @@
-import { useState } from 'react'
-import { projects, type Project } from '../data/projects'
-import { ProjectCard } from './ProjectCard'
-import { ProjectModal } from './ProjectModal'
+import { projects } from '../data/projects'
+import { ProjectSection } from './ProjectSection'
 
 export function Projects() {
-  const [selected, setSelected] = useState<Project | null>(null)
-
   return (
     <section id="projects">
       <div className="section-inner">
         <h2 className="section-title">Projects</h2>
-        <div className="projects-grid">
-          {projects.map(project => (
-            <ProjectCard
-              key={project.title}
-              project={project}
-              onClick={() => setSelected(project)}
-            />
-          ))}
-        </div>
       </div>
-      <ProjectModal project={selected} onClose={() => setSelected(null)} />
+      <div className="projects-list">
+        {projects.map((project, i) => (
+          <ProjectSection key={project.title} project={project} index={i} />
+        ))}
+      </div>
     </section>
   )
 }

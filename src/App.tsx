@@ -11,7 +11,7 @@ import { Footer } from './components/Footer'
 function App() {
   useEffect(() => {
     const targets = document.querySelectorAll<HTMLElement>(
-      'section:not(#hero), .skill-category, .project-card, .timeline-item'
+      'section:not(#hero), .skill-category, .project-entry, .timeline-item'
     )
 
     const observer = new IntersectionObserver(

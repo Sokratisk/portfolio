@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(grep -E \"\\\\.\\(tsx?|jsx?\\)$\")",
+      "Bash(gh repo *)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm run *)"
     ]
   }
 }
