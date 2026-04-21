@@ -576,6 +576,10 @@ section {
   gap: 4rem;
 }
 
+.project-entry--reverse .project-entry-inner {
+  grid-template-columns: 2fr 45%;
+}
+
 .project-entry--reverse .project-carousel {
   order: 2;
 }
