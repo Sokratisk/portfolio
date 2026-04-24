@@ -860,6 +860,68 @@ section {
   color: var(--accent);
 }
 
+/* expandable details panel — CSS grid trick for smooth height animation */
+.timeline-details {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.timeline-details--open {
+  grid-template-rows: 1fr;
+}
+
+.timeline-details-inner {
+  overflow: hidden;
+}
+
+.timeline-details-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 1rem 0;
+}
+
+.timeline-details-list {
+  padding-bottom: 0.25rem;
+}
+
+.timeline-expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: color 0.2s, gap 0.2s;
+}
+
+.timeline-expand-btn:hover {
+  color: var(--accent-hover);
+}
+
+.expand-chevron {
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.expand-chevron--open {
+  transform: rotate(180deg);
+}
+
+.timeline-body--clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.timeline-body--open {
+  border-color: var(--accent);
+}
+
 /* ===== CONTACT ===== */
 #contact {
   background: rgba(248, 250, 252, 0.6);

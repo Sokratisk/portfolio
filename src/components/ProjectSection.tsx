@@ -1,6 +1,5 @@
 import { useState } from "react";
 import type { Project } from "../data/projects";
-import placeholderImg from "../assets/placeholder.png";
 
 interface Props {
   project: Project;
@@ -15,7 +14,7 @@ export function ProjectSection({ project, index }: Props) {
     ? project.images
     : project.image
       ? [project.image]
-      : [placeholderImg];
+      : [];
 
   const prev = () => setSlide((s) => (s - 1 + images.length) % images.length);
   const next = () => setSlide((s) => (s + 1) % images.length);

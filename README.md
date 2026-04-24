@@ -21,15 +21,3 @@ npm run preview    # build + run locally via Wrangler
 ## Deployment
 
 Pushing to `main` triggers an automatic redeploy on Cloudflare Pages.
-
-Manual deploy:
-
-```bash
-npm run deploy
-```
-
-## Adding a project
-
-1. Add images under `src/assets/<project-name>/`
-2. Import them in `src/data/projects.ts` and add an entry to the `projects` array
-3. Recommended image size: **1200 × 750 px** (16:10 ratio)
