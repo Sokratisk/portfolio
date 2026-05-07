@@ -23,7 +23,7 @@ export const experience: Experience[] = [
       "Using an in-house shared component library for state management and complex form handling, reducing boilerplate across teams.",
       "Contributed to a greenfield Vue project for Ethniki, taking it from initial setup to production.",
     ],
-    tech: ["Angular 21", "Vue", "TypeScript", "NgRx", "RxJS", "Playwright"],
+    tech: ["Angular 21", "Vue", "NgRx - RxJS", "Playwright"],
   },
   {
     role: "Full-Stack Engineer",
@@ -48,7 +48,7 @@ export const experience: Experience[] = [
       ".NET / C#",
       "NgRx - RxJS",
       "Azure DevOps",
-      "SQL & mongoDB",
+      "SQL - mongoDB",
       "keycloak",
     ],
   },
@@ -63,7 +63,7 @@ export const experience: Experience[] = [
     details: [
       "Focused primarily on frontend work in React and Angular, with supporting contributions to Java and Python backend services.",
     ],
-    tech: ["React", "Angular", "TypeScript", "Java", "Python"],
+    tech: ["React", "Angular", "Java", "Python"],
   },
   {
     role: "Game Developer — Unity 3D",
