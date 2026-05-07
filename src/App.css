@@ -306,32 +306,6 @@ section {
   width: 100%;
 }
 
-.hero-about-strip {
-  border-top: 1px solid var(--border);
-  padding: 1.25rem 2rem;
-  background: rgba(248, 250, 252, 0.5);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-@media (prefers-color-scheme: dark) {
-  .hero-about-strip {
-    background: rgba(15, 23, 42, 0.5);
-  }
-}
-
-.hero-about-bio {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  max-width: 680px;
-  margin: 0 auto;
-  line-height: 1.75;
-  text-align: center;
-}
-
-.hero-about-bio strong {
-  color: var(--text);
-}
 
 .hero-eyebrow {
   font-size: 1.1rem;
@@ -357,11 +331,11 @@ section {
 }
 
 .hero-description {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
-  max-width: 500px;
-  margin-bottom: 2.5rem;
-  line-height: 1.7;
+  max-width: 560px;
+  margin: 0.75rem 0 1.5rem;
+  line-height: 1.75;
 }
 
 .hero-description strong {
@@ -574,10 +548,6 @@ section {
   display: grid;
   grid-template-columns: 55% 1fr;
   gap: 4rem;
-}
-
-.project-entry--reverse .project-entry-inner {
-  grid-template-columns: 2fr 45%;
 }
 
 .project-entry--reverse .project-carousel {
@@ -897,7 +867,9 @@ section {
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--accent);
-  transition: color 0.2s, gap 0.2s;
+  transition:
+    color 0.2s,
+    gap 0.2s;
 }
 
 .timeline-expand-btn:hover {
@@ -1025,11 +997,7 @@ section {
     padding: 5rem 1.25rem 2rem;
   }
 
-  .hero-about-strip {
-    padding: 1rem 1.25rem;
-  }
-
-  .skill-categories {
+.skill-categories {
     grid-template-columns: 1fr;
   }
 
