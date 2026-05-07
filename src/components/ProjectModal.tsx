@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import type { Project } from '../data/projects'
-import placeholderImg from '../assets/placeholder.png'
+const placeholderImg = '/assets/placeholder.png'
 
 interface Props {
   project: Project | null
