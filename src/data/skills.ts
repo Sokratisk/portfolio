@@ -1,31 +1,106 @@
+export type SkillLevel = "Familiar" | "Intermediate" | "Advanced" | "Expert";
+
+export interface Skill {
+  name: string;
+  level: SkillLevel;
+}
+
+export interface SubCategory {
+  name: string;
+  skills: Skill[];
+}
+
 export interface SkillCategory {
   name: string;
-  skills: string[];
+  featured?: boolean;
+  subcategories?: SubCategory[];
+  skills?: Skill[];
 }
 
 export const skillCategories: SkillCategory[] = [
   {
-    name: "Frontend Frameworks",
-    skills: ["Angular", "Vue", "React"],
-  },
-  {
-    name: "Frontend Technologies",
-    skills: ["TypeScript", "JavaScript", "RxJS", "NgRx", "HTML5", "CSS / SCSS"],
+    name: "Frontend",
+    featured: true,
+    subcategories: [
+      {
+        name: "Frameworks & Libraries",
+        skills: [
+          { name: "Angular 13-21", level: "Expert" },
+          { name: "React", level: "Advanced" },
+          { name: "Vue", level: "Intermediate" },
+        ],
+      },
+      {
+        name: "Languages",
+        skills: [
+          { name: "TypeScript", level: "Expert" },
+          { name: "JavaScript", level: "Expert" },
+          { name: "HTML5", level: "Advanced" },
+          { name: "CSS / SCSS", level: "Advanced" },
+        ],
+      },
+      {
+        name: "Testing",
+        skills: [
+          { name: "Jest", level: "Advanced" },
+          { name: "Playwright", level: "Intermediate" },
+        ],
+      },
+      {
+        name: "State Management",
+        skills: [
+          { name: "NgRx", level: "Expert" },
+          { name: "RxJS", level: "Expert" },
+        ],
+      },
+    ],
   },
   {
     name: "Backend",
-    skills: [".NET / C#", "Django / Python", "Node.js", "REST APIs"],
+    subcategories: [
+      {
+        name: "Technologies",
+        skills: [
+          { name: ".NET / C#", level: "Advanced" },
+          { name: "Node.js", level: "Intermediate" },
+          { name: "Django / Python", level: "Intermediate" },
+          { name: "REST APIs", level: "Advanced" },
+        ],
+      },
+      {
+        name: "Database",
+        skills: [
+          { name: "SQL", level: "Advanced" },
+          { name: "MongoDB", level: "Familiar" },
+        ],
+      },
+    ],
   },
   {
     name: "DevOps & Tools",
-    skills: ["Git", "Azure", "Agile / Scrum"],
+    subcategories: [
+      {
+        name: "DevOps",
+        skills: [
+          { name: "Git", level: "Advanced" },
+          { name: "Azure Pipelines", level: "Familiar" },
+        ],
+      },
+      {
+        name: "AI Tools",
+        skills: [
+          { name: "Claude", level: "Advanced" },
+          { name: "GitHub Copilot", level: "Advanced" },
+        ],
+      },
+    ],
   },
   {
-    name: "Game & XR",
-    skills: ["Unity 3D", "C#", "Oculus / XR"],
-  },
-  {
-    name: "AI Tools",
-    skills: ["Claude", "GitHub Copilot"],
+    name: "Game Development",
+    skills: [
+      { name: "Unity 3D", level: "Advanced" },
+      { name: "RPG Maker IV", level: "Intermediate" },
+      { name: "Android Studio", level: "Intermediate" },
+    ],
   },
 ];

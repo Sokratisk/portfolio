@@ -8,14 +8,14 @@ export function Hero() {
           <div className="hero-text">
             <p className="hero-eyebrow">Hi, I'm</p>
             <h1>Sokratis Kelemidis</h1>
-            <h2>Frontend Software Engineer</h2>
+            <h2>Full-stack Software Engineer</h2>
             <p className="hero-description">
               Full-stack engineer based in Athens, Greece — 4+ years owning the{" "}
               <strong>full product cycle</strong> from architecture to
               deployment across insurance, pharma &amp; automotive. Expert in{" "}
               <strong>Angular</strong> and <strong>.NET</strong>, with
               experience in Vue, Django, and Unity 3D. Currently building
-              AI-powered products with <strong>Claude</strong>.
+              AI-assisted products with <strong>Claude</strong>.
             </p>
             <div className="hero-actions">
               <a href="#projects" className="btn btn-primary">

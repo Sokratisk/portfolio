@@ -1,21 +1,14 @@
 import { skillCategories } from '../data/skills'
-import { SkillTag } from './SkillCard'
+import { SkillCategoryCard } from './SkillCard'
 
 export function Skills() {
   return (
     <section id="skills">
       <div className="section-inner">
         <h2 className="section-title">Skills</h2>
-        <div className="skill-categories">
+        <div className="skill-grid">
           {skillCategories.map(cat => (
-            <div key={cat.name} className="skill-category">
-              <h3 className="skill-category-name">{cat.name}</h3>
-              <div className="skill-tags">
-                {cat.skills.map(name => (
-                  <SkillTag key={name} name={name} />
-                ))}
-              </div>
-            </div>
+            <SkillCategoryCard key={cat.name} category={cat} />
           ))}
         </div>
       </div>

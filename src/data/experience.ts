@@ -5,6 +5,7 @@ export interface Experience {
   period: string;
   description: string[];
   details?: string[];
+  tech?: string[];
 }
 
 export const experience: Experience[] = [
@@ -14,16 +15,15 @@ export const experience: Experience[] = [
     location: "Hybrid",
     period: "2025 — Present",
     description: [
-      "Building customer-facing insurance platforms for enterprise clients including Allianz and Ethniki.",
-      "Primary stack: Angular and Vue.",
+      "Creating the new Allianz Direct customer portal for Italy using Angular 21.",
+      "Building insurance platforms for enterprise clients, primarily Allianz and Ethniki.",
     ],
     details: [
-      "Working for Allianz Direct, a leading European online insurance provider, on revamping their customer portal to improve UX and performance.",
-      "Staying current with the latest Angular versions, adopting new primitives such as signals and standalone components as they stabilise.",
       "End-to-end test coverage with Playwright across critical user journeys.",
-      "Leveraging an in-house shared component library for state management and complex form handling, reducing boilerplate across teams.",
+      "Using an in-house shared component library for state management and complex form handling, reducing boilerplate across teams.",
       "Contributed to a greenfield Vue project for Ethniki, taking it from initial setup to production.",
     ],
+    tech: ["Angular 21", "Vue", "TypeScript", "NgRx", "RxJS", "Playwright"],
   },
   {
     role: "Full-Stack Engineer",
@@ -32,38 +32,48 @@ export const experience: Experience[] = [
     period: "2022 — 2025",
     description: [
       "Delivered production Angular applications for pharmaceutical and food industry clients.",
-      "Primary stack: Angular and .NET.",
-      "Owned frontend architecture, code quality standards, and deployment pipelines.",
+      "Led frontend architecture decisions, code quality standards, and deployment pipelines.",
     ],
     details: [
-      "Built micro-frontend applications (Angular 13–19) deployed under a shell host, serving multiple enterprise pharmaceutical clients.",
+      "Built micro-frontend applications deployed under a shell host, serving multiple enterprise pharmaceutical clients.",
       "Developed .NET microservices for backend data processing and API layers.",
       "Integrated Node-RED for IoT sensor scripting and real-time data pipelines.",
       "Managed CI/CD pipelines on Azure DevOps; handled both cloud and on-premise deployments tailored to each client's infrastructure.",
       "Acted as a client contact for bug triage, feature scoping, and production incident resolution.",
     ],
+    tech: [
+      "Angular 13-19",
+      "PrimeNg",
+      "Highcharts js",
+      ".NET / C#",
+      "NgRx - RxJS",
+      "Azure DevOps",
+      "SQL & mongoDB",
+      "keycloak",
+    ],
   },
   {
     role: "Full-Stack Engineer",
     company: "NIKI Ltd Digital Engineering",
-    location: "",
+    location: "Contract",
     period: "2022",
     description: [
-      "Contract Full-Stack Engineer for projects serving leading German automotive manufacturers, using React, Angular, and Java.",
+      "Worked on projects for major German automotive manufacturers, using React, Angular, and Java.",
     ],
     details: [
-      "Short-term engagement that served as my first professional introduction to full-stack web development.",
       "Focused primarily on frontend work in React and Angular, with supporting contributions to Java and Python backend services.",
     ],
+    tech: ["React", "Angular", "TypeScript", "Java", "Python"],
   },
   {
     role: "Game Developer — Unity 3D",
     company: "Tenebra Studios",
-    location: "Athens",
+    location: "Contract",
     period: "Feb 2021 — Feb 2022",
     description: [
-      "Contract developer building games and interactive VR experiences in Unity 3D, including an Oculus VR museum walkthrough and a music-driven Android game.",
+      "Game Developer building games and interactive VR experiences in Unity 3D, including an Oculus VR museum walkthrough and a music-driven Android game.",
       "Developed a turn-based RPG in RPG Maker for a non-profit client.",
     ],
+    tech: ["Unity 3D", "C#", "Oculus / XR", "RPG Maker MV", "Android"],
   },
 ];

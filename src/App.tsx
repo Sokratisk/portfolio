@@ -1,34 +1,33 @@
-import { useEffect } from 'react'
-import './App.css'
-import { Navbar } from './components/Navbar'
-import { Hero } from './components/Hero'
-import { Skills } from './components/Skills'
-import { Projects } from './components/Projects'
-import { Experience } from './components/Experience'
-import { Contact } from './components/Contact'
-import { Footer } from './components/Footer'
+import { useEffect } from "react";
+import "./App.css";
+import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
+import { Skills } from "./components/Skills";
+import { Projects } from "./components/Projects";
+import { Experience } from "./components/Experience";
+import { Contact } from "./components/Contact";
 
 function App() {
   useEffect(() => {
     const targets = document.querySelectorAll<HTMLElement>(
-      'section:not(#hero), .skill-category, .project-entry, .timeline-item'
-    )
+      "section:not(#hero), .skill-category, .project-entry, .timeline-item",
+    );
 
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('in-view')
-            observer.unobserve(entry.target)
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
           }
-        })
+        });
       },
-      { threshold: 0.08 }
-    )
+      { threshold: 0.08 },
+    );
 
-    targets.forEach(el => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
+    targets.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="portfolio">
@@ -43,9 +42,8 @@ function App() {
       <Experience />
       <Projects />
       <Contact />
-      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

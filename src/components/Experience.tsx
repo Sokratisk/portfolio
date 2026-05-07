@@ -44,6 +44,14 @@ export function Experience() {
                     ))}
                   </ul>
 
+                  {job.tech && job.tech.length > 0 && (
+                    <div className="timeline-tech" onClick={e => e.stopPropagation()}>
+                      {job.tech.map(t => (
+                        <span key={t} className="tag">{t}</span>
+                      ))}
+                    </div>
+                  )}
+
                   {hasDetails && (
                     <>
                       <div className={`timeline-details${isOpen ? ' timeline-details--open' : ''}`}>
