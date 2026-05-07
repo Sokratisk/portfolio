@@ -1,58 +1,31 @@
-export interface Skill {
-  name: string
-  level: 1 | 2 | 3 | 4 | 5
-}
-
 export interface SkillCategory {
-  name: string
-  skills: Skill[]
-}
-
-export const levelLabel: Record<number, string> = {
-  5: 'Expert',
-  4: 'Advanced',
-  3: 'Proficient',
-  2: 'Familiar',
-  1: 'Learning',
+  name: string;
+  skills: string[];
 }
 
 export const skillCategories: SkillCategory[] = [
   {
-    name: 'Frontend',
-    skills: [
-      { name: 'Angular', level: 5 },
-      { name: 'Vue', level: 5 },
-      { name: 'TypeScript', level: 4 },
-      { name: 'JavaScript', level: 4 },
-      { name: 'RxJS', level: 4 },
-      { name: 'NgRx', level: 4 },
-      { name: 'HTML5 / CSS / SCSS', level: 4 },
-      { name: 'React', level: 3 },
-    ],
+    name: "Frontend Frameworks",
+    skills: ["Angular", "Vue", "React"],
   },
   {
-    name: 'Backend',
-    skills: [
-      { name: 'REST APIs', level: 4 },
-      { name: '.NET / C#', level: 3 },
-      { name: 'Django / Python', level: 3 },
-      { name: 'Node.js', level: 2 },
-    ],
+    name: "Frontend Technologies",
+    skills: ["TypeScript", "JavaScript", "RxJS", "NgRx", "HTML5", "CSS / SCSS"],
   },
   {
-    name: 'DevOps & Tools',
-    skills: [
-      { name: 'Git', level: 4 },
-      { name: 'Agile / Scrum', level: 3 },
-      { name: 'Azure', level: 2 },
-    ],
+    name: "Backend",
+    skills: [".NET / C#", "Django / Python", "Node.js", "REST APIs"],
   },
   {
-    name: 'Game & XR',
-    skills: [
-      { name: 'Unity 3D', level: 4 },
-      { name: 'C#', level: 4 },
-      { name: 'Oculus / XR', level: 3 },
-    ],
+    name: "DevOps & Tools",
+    skills: ["Git", "Azure", "Agile / Scrum"],
   },
-]
+  {
+    name: "Game & XR",
+    skills: ["Unity 3D", "C#", "Oculus / XR"],
+  },
+  {
+    name: "AI Tools",
+    skills: ["Claude", "GitHub Copilot"],
+  },
+];

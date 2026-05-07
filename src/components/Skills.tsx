@@ -1,5 +1,5 @@
 import { skillCategories } from '../data/skills'
-import { SkillRow } from './SkillCard'
+import { SkillTag } from './SkillCard'
 
 export function Skills() {
   return (
@@ -10,9 +10,9 @@ export function Skills() {
           {skillCategories.map(cat => (
             <div key={cat.name} className="skill-category">
               <h3 className="skill-category-name">{cat.name}</h3>
-              <div className="skill-rows">
-                {cat.skills.map(skill => (
-                  <SkillRow key={skill.name} skill={skill} />
+              <div className="skill-tags">
+                {cat.skills.map(name => (
+                  <SkillTag key={name} name={name} />
                 ))}
               </div>
             </div>
