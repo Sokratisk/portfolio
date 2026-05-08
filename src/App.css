@@ -212,6 +212,28 @@ section:not(#hero).in-view {
   flex-shrink: 0;
 }
 
+.nav-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0.6rem 0.9rem 0.6rem 0.6rem;
+  transition: color 0.2s;
+}
+
+.nav-theme-toggle svg {
+  width: 15px;
+  height: 15px;
+}
+
+.nav-theme-toggle:hover {
+  color: var(--accent);
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -259,16 +281,27 @@ section:not(#hero).in-view {
   letter-spacing: 0.01em;
 }
 
-.nav-links li:last-child a {
-  padding-right: 1.4rem;
-}
-
 .nav-links a:hover {
   color: var(--text);
 }
 
 .nav-links a.active {
   color: var(--accent);
+}
+
+.nav-cv-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.6rem 0.9rem;
+  transition: color 0.2s;
+  flex-shrink: 0;
+  letter-spacing: 0.01em;
+}
+
+.nav-cv-link:hover {
+  color: var(--accent-hover);
 }
 
 /* ===== SECTIONS ===== */
@@ -1266,6 +1299,11 @@ section {
     padding: 0.9rem 1.25rem;
     font-size: 0.95rem;
     border-radius: 0;
+  }
+
+  .nav-cv-link,
+  .nav-theme-toggle {
+    padding: 0.9rem 1rem;
   }
 
   section {

@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sokratis Kelemidis — CV</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --accent: #2563eb;
+        --text: #111827;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --bg: #ffffff;
+        --section-gap: 11px;
+      }
+
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        font-size: 9pt;
+        line-height: 1.35;
+        color: var(--text);
+        background: var(--bg);
+        padding: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* ── Page shell ── */
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 8mm 13mm 6mm;
+        display: grid;
+        grid-template-columns: 1fr 62mm;
+        grid-template-rows: auto 1fr;
+        gap: 0 18px;
+      }
+
+      /* ── Header spans both columns ── */
+      header {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 8px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid var(--accent);
+      }
+
+      .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 4px;
+      }
+
+      .header-name h1 {
+        font-size: 22pt;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        color: var(--text);
+      }
+
+      .header-name p {
+        font-size: 10.5pt;
+        font-weight: 400;
+        color: var(--muted);
+        margin-top: 2px;
+      }
+
+      .header-summary {
+        font-size: 8pt;
+        color: #4b5563;
+        line-height: 1.55;
+      }
+
+      .header-portfolio {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 6px 14px 6px 12px;
+        background: transparent;
+        color: var(--accent);
+        font-size: 8pt;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 20px;
+        border: 1.5px solid var(--accent);
+        letter-spacing: 0.2px;
+      }
+
+      .header-portfolio svg {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+        transition: transform 0.15s ease;
+      }
+
+      .header-portfolio:hover svg {
+        transform: translate(1px, -1px);
+      }
+
+      .header-contact {
+        text-align: right;
+        font-size: 8.5pt;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      .header-contact a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      /* ── Left column (main) ── */
+      .main {
+        grid-column: 1;
+      }
+
+      /* ── Right column (sidebar) ── */
+      .sidebar {
+        grid-column: 2;
+        border-left: 1px solid var(--border);
+        padding-left: 16px;
+      }
+
+      /* ── Section ── */
+      section {
+        margin-bottom: var(--section-gap);
+      }
+
+      .section-title {
+        font-size: 7pt;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 7px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      /* ── Experience entry ── */
+      .entry {
+        margin-bottom: 6px;
+        padding: 5px 0 5px 11px;
+        border-left: 3px solid #d1d5db;
+      }
+
+      .entry.current {
+        border-left-color: var(--accent);
+      }
+
+      .entry:last-child {
+        margin-bottom: 0;
+      }
+
+      .entry-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 8px;
+      }
+
+      .entry-title {
+        font-size: 9.5pt;
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .entry-date {
+        font-size: 7.5pt;
+        color: var(--muted);
+        white-space: nowrap;
+        flex-shrink: 0;
+        background: #f3f4f6;
+        padding: 1px 6px;
+        border-radius: 3px;
+      }
+
+      .entry-meta {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 2px;
+        margin-top: 1px;
+      }
+
+      .entry-company {
+        font-size: 8.5pt;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .entry-type {
+        font-size: 7pt;
+        color: var(--muted);
+        background: #f3f4f6;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-weight: 500;
+      }
+
+      .entry-desc {
+        font-size: 8.5pt;
+        color: #374151;
+        line-height: 1.55;
+      }
+
+      ul.bullets {
+        list-style: none;
+        padding: 0;
+        margin: 2px 0 0;
+      }
+
+      ul.bullets li {
+        padding-left: 10px;
+        position: relative;
+        margin-bottom: 1px;
+        font-size: 8pt;
+        color: #374151;
+      }
+
+      ul.bullets li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--accent);
+        opacity: 0.5;
+      }
+
+      /* ── Tags (tech stack) ── */
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-top: 4px;
+      }
+
+      .tag {
+        font-size: 7pt;
+        font-weight: 500;
+        background: #eff6ff;
+        color: var(--accent);
+        padding: 1px 6px;
+        border-radius: 3px;
+      }
+
+      /* ── Sidebar: skills ── */
+      .skill-group {
+        margin-bottom: 6px;
+      }
+
+      .skill-group-label {
+        font-size: 6.5pt;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 4px;
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3px;
+      }
+
+      .skill-tag {
+        font-size: 7.5pt;
+        font-weight: 500;
+        color: #374151;
+        background: #f3f4f6;
+        border: 1px solid #e5e7eb;
+        padding: 2px 7px;
+        border-radius: 3px;
+      }
+
+      .skill-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .skill-list li {
+        font-size: 8.5pt;
+        color: #374151;
+        margin-bottom: 3px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* ── Practices list ── */
+      .practice-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .practice-list li {
+        font-size: 8pt;
+        color: #374151;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+
+      .practice-list li::before {
+        content: "";
+        flex-shrink: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 1px;
+        background: var(--accent);
+        opacity: 0.6;
+      }
+
+      /* ── Sidebar: contact ── */
+      .contact-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .contact-list li {
+        font-size: 8.5pt;
+        color: #374151;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      .contact-list .contact-icon {
+        flex-shrink: 0;
+        width: 13px;
+        height: 13px;
+        margin-top: 1px;
+        color: var(--muted);
+      }
+
+      .contact-list a {
+        color: var(--accent);
+        text-decoration: none;
+        word-break: break-all;
+      }
+
+      .contact-list a:hover {
+        text-decoration: underline;
+      }
+
+      .website-highlight {
+        display: inline-block;
+        margin-top: 2px;
+        font-size: 8.5pt;
+        font-weight: 600;
+        color: var(--accent);
+        background: #eff6ff;
+        padding: 2px 7px;
+        border-radius: 4px;
+        border: 1px solid #bfdbfe;
+      }
+
+      /* ── Projects compact ── */
+      .project-entry {
+        margin-bottom: 7px;
+      }
+
+      .project-name {
+        font-size: 8.5pt;
+        font-weight: 600;
+      }
+
+      .project-desc {
+        font-size: 8pt;
+        color: #4b5563;
+        margin-top: 1px;
+      }
+
+      .project-gh {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 7.5pt;
+        color: var(--muted);
+        text-decoration: none;
+        flex-shrink: 0;
+      }
+
+      .project-gh svg {
+        width: 11px;
+        height: 11px;
+      }
+
+      .project-gh:hover {
+        color: var(--accent);
+      }
+
+      /* ── Print ── */
+      @media print {
+        body {
+          padding: 0;
+          background: white;
+        }
+        .page {
+          margin: 0;
+          width: 100%;
+          min-height: 0;
+        }
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      /* ── Screen preview ── */
+      @media screen {
+        body {
+          background: #f3f4f6;
+          padding: 24px;
+        }
+        .page {
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+          border-radius: 4px;
+        }
+        .print-hint {
+          text-align: center;
+          margin-bottom: 16px;
+          font-family: system-ui, sans-serif;
+          font-size: 13px;
+          color: #6b7280;
+        }
+        .print-hint kbd {
+          background: #e5e7eb;
+          padding: 1px 6px;
+          border-radius: 4px;
+          font-size: 12px;
+        }
+      }
+
+      @media print {
+        .print-hint {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p class="print-hint">
+      Press <kbd>Ctrl+P</kbd> (or <kbd>⌘P</kbd> on Mac) → Save as PDF. Set
+      margins to <strong>None</strong> and disable headers/footers.
+    </p>
+
+    <div class="page">
+      <!-- ══════════════════ HEADER ══════════════════ -->
+      <header>
+        <div class="header-top">
+          <div class="header-name">
+            <h1>Sokratis Kelemidis</h1>
+            <p>Full-Stack Software Engineer</p>
+          </div>
+          <a href="https://skelemidis.com" class="header-portfolio">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+            skelemidis.com
+          </a>
+        </div>
+        <p class="header-summary">
+          4+ years building enterprise web applications across insurance,
+          pharma, and automotive. Angular &amp; .NET specialist with a track
+          record of owning products end-to-end, from architecture to production.
+        </p>
+      </header>
+
+      <!-- ══════════════════ MAIN COLUMN ══════════════════ -->
+      <div class="main">
+        <!-- EXPERIENCE -->
+        <section>
+          <h2 class="section-title">Experience</h2>
+
+          <div class="entry current">
+            <div class="entry-header">
+              <span class="entry-title">Senior Frontend Software Engineer</span>
+              <span class="entry-date">2025 — Present</span>
+            </div>
+            <div class="entry-meta">
+              <span class="entry-company">ImprovIT</span>
+              <span class="entry-type">Hybrid</span>
+            </div>
+            <ul class="bullets">
+              <li>
+                Building the redesigned Allianz Direct Italy customer portal in
+                Angular 21, serving one of Europe's largest insurers with a
+                fully modernised self-service experience
+              </li>
+              <li>
+                Drove a greenfield Vue project for Ethniki Asfalistiki, the
+                largest insurer in Greece, from initial architecture through
+                production launch
+              </li>
+              <li>
+                End-to-end Playwright test coverage across 2 insurance
+                platforms; leveraging an in-house component library for complex
+                state and form management
+              </li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Angular 21</span>
+              <span class="tag">Vue</span>
+              <span class="tag">NgRx / RxJS</span>
+              <span class="tag">Playwright</span>
+              <span class="tag">TypeScript</span>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-header">
+              <span class="entry-title">Full-Stack Engineer</span>
+              <span class="entry-date">2022 — 2025</span>
+            </div>
+            <div class="entry-meta">
+              <span class="entry-company">Vimachem</span>
+              <span class="entry-type">Remote</span>
+            </div>
+            <ul class="bullets">
+              <li>
+                Delivered production Angular applications for pharma clients
+                including Corden Pharma and Vianex, spanning ~20 cloud and
+                on-premise installations across multiple client environments
+              </li>
+              <li>
+                Led frontend architecture decisions and code quality standards;
+                designed micro-frontend applications under a shell host with
+                .NET microservice backends for data processing and REST APIs
+              </li>
+              <li>
+                Managed CI/CD pipelines on Azure DevOps across 4 environments
+                (dev, test, demo, production) for all client deployments;
+                integrated Node-RED for IoT sensor scripting and real-time data
+                pipelines
+              </li>
+              <li>
+                Acted as primary client contact for feature scoping, bug triage,
+                and production incident resolution
+              </li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Angular 13–19</span>
+              <span class="tag">.NET / C#</span>
+              <span class="tag">NgRx / RxJS</span>
+              <span class="tag">Azure DevOps</span>
+              <span class="tag">SQL / MongoDB</span>
+              <span class="tag">Keycloak</span>
+              <span class="tag">Node-RED</span>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-header">
+              <span class="entry-title">Software Engineer</span>
+              <span class="entry-date">2022</span>
+            </div>
+            <div class="entry-meta">
+              <span class="entry-company">NIKI Ltd Digital Engineering</span>
+              <span class="entry-type">Contract</span>
+            </div>
+            <ul class="bullets">
+              <li>
+                Engineered frontend features in React and Angular for 2+ major
+                German automotive manufacturers, with backend contributions in
+                Java and Python
+              </li>
+            </ul>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Angular</span>
+              <span class="tag">Java</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-header">
+              <span class="entry-title">Game Developer — Unity 3D</span>
+              <span class="entry-date">2021 — 2022</span>
+            </div>
+            <div class="entry-meta">
+              <span class="entry-company">Tenebra Studios</span>
+              <span class="entry-type">Contract</span>
+            </div>
+            <ul class="bullets">
+              <li>
+                Built an immersive VR museum platform (Oculus) deployed by
+                Teloglion Fine Arts Museum, Thessaloniki
+              </li>
+              <li>
+                Shipped a music-driven Android game and an RPG for HumanRights360
+                helping migrants navigate real-life situations in Greece
+              </li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Unity 3D</span>
+              <span class="tag">C#</span>
+              <span class="tag">Oculus/XR</span>
+              <span class="tag">Android</span>
+              <span class="tag">RPG Maker MV</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section>
+          <h2 class="section-title">Selected Projects</h2>
+
+          <div class="project-entry">
+            <div class="entry-header">
+              <span class="project-name">Rotor Command</span>
+            </div>
+            <div class="project-desc">
+              Co-built a full-stack back-office platform for helicopter
+              rental management, covering booking workflows, fleet tracking, and
+              user management with role-based access control. Built with Django
+              (Python) and React.
+            </div>
+          </div>
+
+          <div class="project-entry">
+            <div class="entry-header">
+              <span class="project-name">GeoRankings</span>
+              <a
+                href="https://github.com/Sokratisk/georankings"
+                class="project-gh"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"
+                  />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+                github
+              </a>
+            </div>
+            <div class="project-desc">
+              Full-stack score tracking app for GeoGrid, featuring user
+              management, seasonal leaderboards, personal bests and performance
+              visualisations. Angular 19, NgRx, Node.js/Express, SQLite.
+            </div>
+          </div>
+
+          <div class="project-entry">
+            <div class="entry-header">
+              <span class="project-name">VR Museum Platform</span>
+            </div>
+            <div class="project-desc">
+              White-label immersive museum experience in Unity 3D with
+              Oculus/XR, featuring artwork displays and spatial audio
+              descriptions. Deployed by Teloglion Fine Arts Museum.
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ══════════════════ SIDEBAR ══════════════════ -->
+      <div class="sidebar">
+        <!-- CONTACT -->
+        <section>
+          <h2 class="section-title">Contact</h2>
+          <ul class="contact-list">
+            <li>
+              <svg
+                class="contact-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              <a href="mailto:sokratis.kelemidis@gmail.com"
+                >sokratis.kelemidis@gmail.com</a
+              >
+            </li>
+            <li>
+              <svg
+                class="contact-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.1 6.1l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+              <a href="tel:+6955376786">+30 695 537 6786</a>
+            </li>
+            <li>
+              <svg
+                class="contact-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              <a href="https://linkedin.com/in/sokratis-kelemidis"
+                >linkedin.com/in/sokratis-kelemidis</a
+              >
+            </li>
+            <li>
+              <svg
+                class="contact-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"
+                />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
+              </svg>
+              <a href="https://github.com/Sokratisk">github.com/Sokratisk</a>
+            </li>
+            <li>
+              <svg
+                class="contact-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Athens, Greece</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+          <h2 class="section-title">Education</h2>
+          <div style="font-size: 8.5pt; font-weight: 600; color: var(--text)">
+            Computer Science &amp; Engineering
+          </div>
+          <div
+            style="
+              font-size: 8pt;
+              color: var(--muted);
+              display: flex;
+              align-items: center;
+              gap: 6px;
+            "
+          >
+            University of Ioannina
+            <span
+              style="
+                font-size: 7pt;
+                color: var(--muted);
+                background: #f3f4f6;
+                border: 1px solid #e5e7eb;
+                padding: 1px 6px;
+                border-radius: 3px;
+                font-weight: 500;
+              "
+              >In progress</span
+            >
+          </div>
+          <div style="font-size: 7.5pt; color: #6b7280; margin-top: 3px">
+            Thesis: Entropy computation on biomedical data series with noise,
+            artifacts and incomplete recording
+          </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section>
+          <h2 class="section-title">Skills</h2>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Frontend</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Angular</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">NgRx / RxJS</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Vue</span>
+              <span class="skill-tag">HTML / CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Backend &amp; Data</div>
+            <div class="skill-tags">
+              <span class="skill-tag">.NET / C#</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Django</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Tooling &amp; Testing</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Azure DevOps</span>
+              <span class="skill-tag">Playwright</span>
+              <span class="skill-tag">Karma / Jasmine</span>
+              <span class="skill-tag">Unity 3D</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRACTICES -->
+        <section>
+          <h2 class="section-title">Practices</h2>
+          <ul class="practice-list">
+            <li>Agile / Scrum</li>
+            <li>CI/CD &amp; Deployment Pipelines</li>
+            <li>Micro-frontend Architecture</li>
+            <li>Code Review &amp; Standards</li>
+            <li>Client-facing Communication</li>
+          </ul>
+        </section>
+
+        <!-- LANGUAGES -->
+        <section>
+          <h2 class="section-title">Languages</h2>
+          <ul class="skill-list">
+            <li>Greek — Native</li>
+            <li>English — Fluent</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

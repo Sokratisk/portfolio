@@ -24,6 +24,9 @@ export function Hero() {
               <a href="#contact" className="btn btn-outline">
                 Contact Me
               </a>
+              <a href="/cv" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                View CV
+              </a>
             </div>
           </div>
           <div className="hero-avatar">
