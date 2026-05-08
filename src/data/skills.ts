@@ -42,7 +42,7 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "Testing",
         skills: [
-          { name: "Jest", level: "Advanced" },
+          { name: "Karma / Jasmine", level: "Advanced" },
           { name: "Playwright", level: "Intermediate" },
         ],
       },
@@ -70,7 +70,7 @@ export const skillCategories: SkillCategory[] = [
       {
         name: "Database",
         skills: [
-          { name: "SQL", level: "Advanced" },
+          { name: "SQL", level: "Intermediate" },
           { name: "MongoDB", level: "Familiar" },
         ],
       },
