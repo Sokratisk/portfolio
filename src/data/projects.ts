@@ -32,6 +32,7 @@ export const projects: Project[] = [
     images: [
       "/assets/personal-finances/year.png",
       "/assets/personal-finances/dashboard.png",
+      "/assets/personal-finances/trips.png",
     ],
   },
   {
