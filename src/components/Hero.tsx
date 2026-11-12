@@ -12,7 +12,7 @@ export function Hero() {
             <p className="hero-description">
               Full-stack engineer based in Athens, Greece — 4+ years owning the{" "}
               <strong>full product cycle</strong> from architecture to
-              deployment across insurance, pharma &amp; automotive. Expert in{" "}
+              deployment across public sector, insurance, pharma &amp; automotive. Expert in{" "}
               <strong>Angular</strong> and <strong>.NET</strong>, with
               experience in Vue, Django, and Unity 3D. Currently building
               AI-assisted products with <strong>Claude</strong>.

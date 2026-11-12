@@ -11,9 +11,24 @@ export interface Experience {
 export const experience: Experience[] = [
   {
     role: "Frontend Software Engineer",
+    company: "Singular Logic",
+    location: "Athens, Hybrid",
+    period: "Sep 2026 — Present",
+    description: [
+      "Developing the web application for ODAP, the organisation managing Greece's archaeological sites.",
+      "Building ERP solutions for municipalities and local government.",
+    ],
+    details: [
+      "Integrating Authentik for authentication and identity management.",
+      "Working with Hono on the API layer.",
+    ],
+    tech: ["Angular", "Authentik", "Hono", "TypeScript"],
+  },
+  {
+    role: "Frontend Software Engineer",
     company: "ImprovIT",
-    location: "Hybrid",
-    period: "2025 — Present",
+    location: "Athens, Hybrid",
+    period: "2025 — 2026",
     description: [
       "Creating the new Allianz Direct customer portal for Italy using Angular 21.",
       "Building insurance platforms for enterprise clients, primarily Allianz and Ethniki.",
@@ -68,7 +83,7 @@ export const experience: Experience[] = [
   {
     role: "Game Developer — Unity 3D",
     company: "Tenebra Studios",
-    location: "Contract",
+    location: "Remote",
     period: "Feb 2021 — Feb 2022",
     description: [
       "Game Developer building games and interactive VR experiences in Unity 3D, including an Oculus VR museum walkthrough and a music-driven Android game.",
