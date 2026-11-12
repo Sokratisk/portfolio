@@ -16,6 +16,25 @@ export const projects: Project[] = [
   //   tags: ["Django", "Python", "React", "TypeScript", "REST API"],
   // },
   {
+    title: "Personal Finances",
+    description:
+      "An installable yearly budget app that works like a spreadsheet: categories × months, trips and big purchases, monthly account counts and standalone funds, with dashboards and an optional live mirror to Google Sheets. Built with Angular 22 (signals) and Tailwind on the frontend and a Hono API on Cloudflare Workers backed by Firestore, running entirely on free tiers.",
+    tags: [
+      "Angular 22",
+      "Hono",
+      "Cloudflare Workers",
+      "Firestore",
+      "Tailwind CSS",
+      "PWA",
+    ],
+    github: "https://github.com/Sokratisk/personal-finances",
+    live: "https://personal-finances.net",
+    images: [
+      "/assets/personal-finances/year.png",
+      "/assets/personal-finances/dashboard.png",
+    ],
+  },
+  {
     title: "GeoRankings",
     description:
       "A full-stack score tracking app for GeoGrid, a geography-based puzzle game. Features user management, seasonal leaderboards, personal bests, and performance visualisations with bar charts. Built with Angular 19, NgRx, Node.js/Express, and SQLite.",
